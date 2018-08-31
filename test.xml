@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCUMENT VERSION="2.0" OBJECT_TYPE="attribute">
+    <DESCRIPT_DATA version="20_V73_Fix7" customer="Trainings">
+        <CONTENT type="attribute" id="9071503853013721370" name="SNMP Location"></CONTENT>
+    </DESCRIPT_DATA>
+    <NC_ATTR_OBJECT_TYPES>
+        <ROW>
+            <ATTR_ID>9071503853013721370</ATTR_ID>
+            <OBJECT_TYPE_ID>301</OBJECT_TYPE_ID>
+            <ATTR_SCHEMA_ID>2111777687013562268</ATTR_SCHEMA_ID>
+            <ISDISPLAYED>0</ISDISPLAYED>
+            <REQUIRED>0</REQUIRED>
+            <OPTIONS>0</OPTIONS>
+            <DEFAULT_VALUE></DEFAULT_VALUE>
+            <FLAGS></FLAGS>
+        </ROW>
+    </NC_ATTR_OBJECT_TYPES>
+    <NC_ATTRIBUTES>
+        <ROW>
+            <ATTR_ID>9071503853013721370</ATTR_ID>
+            <ATTR_TYPE_ID>0</ATTR_TYPE_ID>
+            <ATTR_TYPE_DEF_ID></ATTR_TYPE_DEF_ID>
+            <ATTR_GROUP_ID>1090440074013323208</ATTR_GROUP_ID>
+            <ATTR_SCHEMA_ID>2111777687013562268</ATTR_SCHEMA_ID>
+            <NAME>SNMP Location</NAME>
+            <ATTR_ACCESS_TYPE>0</ATTR_ACCESS_TYPE>
+            <ISMULTIPLE>0</ISMULTIPLE>
+            <ISEXTGENERATED>0</ISEXTGENERATED>
+            <ISEXTSTORED>0</ISEXTSTORED>
+            <ADAPTERNAME></ADAPTERNAME>
+            <PARAMS></PARAMS>
+            <UNIQUE_LEVEL>0</UNIQUE_LEVEL>
+            <SHOW_ORDER>4194308</SHOW_ORDER>
+            <SHOW_HISTORY>0</SHOW_HISTORY>
+            <ISSEARCHABLE></ISSEARCHABLE>
+            <MASK></MASK>
+            <DEF_VALUE></DEF_VALUE>
+            <FLAGS>512</FLAGS>
+            <DESCRIPTION></DESCRIPTION>
+            <PROPERTIES></PROPERTIES>
+            <RULES></RULES>
+            <TOOLTIP></TOOLTIP>
+            <AV_ADAPTER_NAME></AV_ADAPTER_NAME>
+            <AV_ADAPTER_PROPERTIES></AV_ADAPTER_PROPERTIES>
+            <INTERNAL_NAME></INTERNAL_NAME>
+        </ROW>
+    </NC_ATTRIBUTES>
+    <NC_GRANTS></NC_GRANTS>
+    <NC_ATTR_TYPES>
+        <ROW>
+            <ATTR_TYPE_ID>0</ATTR_TYPE_ID>
+            <NAME>ATTR_TYPE_TEXT</NAME>
+        </ROW>
+    </NC_ATTR_TYPES>
+    <NC_ATTR_TYPE_DEFS></NC_ATTR_TYPE_DEFS>
+    <NC_ATTR_SCHEMES>
+        <ROW>
+            <ATTR_SCHEMA_ID>2111777687013562268</ATTR_SCHEMA_ID>
+            <PARENT_ID>1093067213013356820</PARENT_ID>
+            <NAME>Network Inventory Schema</NAME>
+            <ATTR_ACCESS_TYPE>-1</ATTR_ACCESS_TYPE>
+            <ISSYSTEM>0</ISSYSTEM>
+            <DESCRIPTION>Used for most of Network Inventory projects</DESCRIPTION>
+            <FLAGS>0</FLAGS>
+            <INTERNAL_NAME>NetworkInventorySchema</INTERNAL_NAME>
+        </ROW>
+    </NC_ATTR_SCHEMES>
+    <NC_LIST_VALUES></NC_LIST_VALUES>
+    <NC_ATTR_GROUPS>
+        <ROW>
+            <ATTR_GROUP_ID>1090440074013323208</ATTR_GROUP_ID>
+            <ATTR_SCHEMA_ID>1</ATTR_SCHEMA_ID>
+            <NAME>Inventory</NAME>
+            <SHOW_ORDER>6000006</SHOW_ORDER>
+            <ATTR_ACCESS_TYPE>0</ATTR_ACCESS_TYPE>
+            <FLAGS>0</FLAGS>
+            <DESCRIPTION></DESCRIPTION>
+            <SUBGROUP>Parameters</SUBGROUP>
+            <ALIAS></ALIAS>
+            <PARAMS></PARAMS>
+        </ROW>
+    </NC_ATTR_GROUPS>
+</DOCUMENT>
