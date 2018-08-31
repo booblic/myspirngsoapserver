@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.*;
 @XmlType(name = "", propOrder = {
     "name"
 })
-@XmlRootElement(name = "getFileRequest")
-public class GetFileRequest {
+@XmlRootElement(name = "getCommerceMLRequest")
+public class GetCommerceMLRequest {
 
     @XmlElement(required = true)
     protected String name;
