@@ -1,7 +1,11 @@
-package system;
+package com.terentev.work.test;
 
-import file.GetFileRequest;
-import file.GetFileResponse;
+import com.terentev.work.entity.User;
+import com.terentev.work.file.GetFileRequest;
+import com.terentev.work.file.GetFileResponse;
+import com.terentev.work.repository.UserRepository;
+import com.terentev.work.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.ws.context.MessageContext;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -15,11 +19,16 @@ import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.xml.soap.MessageFactory;
 import javax.xml.soap.SOAPException;
-
+import javax.xml.validation.SchemaFactory;
+import java.lang.reflect.Array;
 
 @Endpoint
 @ComponentScan("repository")
 public class CountryEndpoint {
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
 
@@ -43,8 +52,13 @@ public class CountryEndpoint {
 
         response.setName(request.getName());
 
-/*        byte[] bytesFile = null;
+        User user = new User();
+        user.setEmail("johny@yandex.ru");
+        user.setName(request.getName());
 
+        userRepository.save(user);
+
+/*        byte[] bytesFile = null;
         try {
             bytesFile = Files.readAllBytes(Paths.get("test.xml"));
         } catch (IOException e) {

@@ -1,9 +1,8 @@
-package system;
+package com.terentev.work.test;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
@@ -15,7 +14,6 @@ import org.springframework.xml.xsd.XsdSchema;
 
 @EnableWs
 @Configuration
-@ComponentScan(basePackages = {"service", "repository"})
 public class WebServiceConfig extends WsConfigurerAdapter {
 
     @Bean
@@ -31,7 +29,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("FilePort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("http://spring.io/guides/gs-producing-web-service");
+        wsdl11Definition.setTargetNamespace("http://spring.io/guides/gs-producing-web-com.terentev.work.service");
         wsdl11Definition.setSchema(countriesSchema);
         return wsdl11Definition;
     }
