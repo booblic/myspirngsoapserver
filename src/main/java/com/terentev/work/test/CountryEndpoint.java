@@ -1,12 +1,9 @@
 package com.terentev.work.test;
 
-import com.terentev.work.entity.User;
 import com.terentev.work.file.GetCommerceMLRequest;
 import com.terentev.work.file.GetCommerceMLResponse;
 import com.terentev.work.file.GetFileRequest;
 import com.terentev.work.file.GetFileResponse;
-import com.terentev.work.repository.UserRepository;
-import com.terentev.work.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.ws.context.MessageContext;
@@ -23,10 +20,8 @@ import javax.activation.FileDataSource;
 import javax.annotation.Resource;
 import javax.xml.soap.MessageFactory;
 import javax.xml.soap.SOAPException;
-import javax.xml.validation.SchemaFactory;
 import javax.xml.ws.WebServiceContext;
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -35,12 +30,8 @@ import java.util.Set;
 @ComponentScan("repository")
 public class CountryEndpoint {
 
-    @Resource
-    WebServiceContext wsContext;
-
     @Autowired
-    private UserRepository userRepository;
-
+    SaajSoapMessageFactory saajSoapMessageFactory;
 
     private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
 
@@ -48,13 +39,13 @@ public class CountryEndpoint {
     @ResponsePayload
     public GetFileResponse getFile(@RequestPayload GetFileRequest request, MessageContext context) {
 
-        SaajSoapMessageFactory factory = null;
+/*        SaajSoapMessageFactory factory = null;
         try {
             factory = new SaajSoapMessageFactory(MessageFactory.newInstance());
         } catch (SOAPException e) {
             e.printStackTrace();
-        }
-        SaajSoapMessage message = factory.createWebServiceMessage();
+        }*/
+        SaajSoapMessage message = saajSoapMessageFactory.createWebServiceMessage();
 
         System.out.println("---------------------------------------");
         System.out.println(request.getName());
@@ -63,12 +54,6 @@ public class CountryEndpoint {
         GetFileResponse response = new GetFileResponse();
 
         response.setName(request.getName());
-
-        User user = new User();
-        user.setEmail("johny@yandex.ru");
-        user.setName(request.getName());
-
-        userRepository.save(user);
 
 /*        byte[] bytesFile = null;
         try {
